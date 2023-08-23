@@ -67,10 +67,10 @@ jobs:
             ${{ runner.os }}-detox-build
 
       - name: Detox build
-        run: yarn detox build --configuration ios.sim.release
+        run: yarn detox build --configuration ios.release
 
       - name: Detox test
-        run: yarn detox test --configuration ios.sim.release --cleanup --headless --record-logs all
+        run: yarn detox test --configuration ios.release --cleanup --headless --record-logs all
 
       - name: Upload artifacts
         if: failure()
