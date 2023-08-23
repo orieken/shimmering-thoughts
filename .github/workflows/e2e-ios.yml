@@ -14,7 +14,6 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x, 18.x]
-        ruby-version: [3.2.x]
 
     steps:
       - name: Checkout repository
@@ -39,6 +38,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
+          ruby-version: '3.2'
           bundler-cache: true
 
       - name: Cache CocoaPods
